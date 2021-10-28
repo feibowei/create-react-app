@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "src",
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es6",
+    "strict": true,
+    "jsx": "react",
+    "noImplicitAny": true,
+    "noEmit": true,
+    "noEmitOnError": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es6", "dom", "esnext"],
+    "paths": {
+      "@modules/*": ["modules/*"],
+      "@views/*": ["views/*"],
+      "@store/*": ["store/*"],
+      "@router/*": ["router/*"],
+      "@assets/*": ["assets/*"]
+    },
+    "typeRoots": ["node_modules/@types"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "src/index.tsx"],
+  "exclude": ["node_modules", "**/*.test.js", "**/*.test.ts"]
+}
