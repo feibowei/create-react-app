@@ -1,5 +1,5 @@
-import request from '../utils/request'
-//import request from 'umi-request'
+import request from '../utils/request';
+// import request from 'umi-request'
 
 interface WeatherRes {
   cityid: string;
@@ -11,5 +11,7 @@ interface WeatherRes {
 }
 
 export async function getWeather() {
-  return request('http://www.tianqiapi.com/api?version=v9&appid=23035354&appsecret=8YvlPNrz')
+  return request(
+    'http://www.tianqiapi.com/api?version=v9&appid=23035354&appsecret=8YvlPNrz'
+  );
 }

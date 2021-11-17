@@ -3,7 +3,7 @@
     "outDir": "./dist",
     "baseUrl": "src",
     "allowJs": true,
-    "checkJs": true,
+    "checkJs": false,
     "skipLibCheck": true,
     "module": "commonjs",
     "esModuleInterop": true,

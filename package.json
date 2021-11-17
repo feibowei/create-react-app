@@ -81,10 +81,12 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "devDependencies": {
+    "@white-matrix/eslint-config": "^1.0.9",
     "eslint": "7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1"

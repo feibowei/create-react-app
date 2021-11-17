@@ -1,26 +1,24 @@
 module.exports = {
-  env: {
-    browser: true, // Browser global variables like `window` etc.
-    commonjs: true, // CommonJS global variables and CommonJS scoping.Allows require, exports and module.
-    es6: true, // Enable all ECMAScript 6 features except for modules.
-    jest: true, // Jest global variables like `it` etc.
-    node: true // Defines things like process.env when generating through node
-  },
-  extends: [],
-  parser: 'babel-eslint', // Uses babel-eslint transforms.
+  plugins: ['simple-import-sort'],
+  extends: ['@white-matrix/eslint-config'],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    },
-    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module' // Allows for the use of imports
+    project: require.resolve('./tsconfig.json')
   },
-  plugins: [],
-  root: true, // For configuration cascading.
-  rules: {},
-  settings: {
-    react: {
-      version: 'detect' // Detect react version
-    }
+  rules: {
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'no-void': 'off',
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/ban-types': 0,
+    '@typescript-eslint/no-use-before-define': ['error'],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-type-alias': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/consistent-type-definitions': ['off', 'type'],
+    '@typescript-eslint/no-empty-interface': 'warn'
   }
 };
