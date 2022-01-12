@@ -1,6 +1,6 @@
 import styles from './App.less';
-import { Header } from './components/Header';
 import { Content } from './components/Content';
+import { Header } from './components/Header';
 
 function App() {
   return (

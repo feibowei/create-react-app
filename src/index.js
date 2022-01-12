@@ -1,9 +1,11 @@
+import './index.less';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.less';
-import App from './App';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
+
+import App from './App';
 import { ContextProvider } from './store/contextProvider';
 
 const queryClient = new QueryClient();

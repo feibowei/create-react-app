@@ -5,7 +5,6 @@
 import { extend } from 'umi-request';
 
 const codeMessage = {
-
   200: '服务器成功返回请求的数据。',
   201: '新建或修改数据成功。',
   202: '一个请求已经进入后台排队（异步任务）。',
@@ -20,23 +19,20 @@ const codeMessage = {
   500: '服务器发生错误，请检查服务器。',
   502: '网关错误。',
   503: '服务不可用，服务器暂时过载或维护。',
-  504: '网关超时。',
+  504: '网关超时。'
 };
 
 /**
  * 异常处理程序
  */
 const errorHandler = (error: any) => {
-
   const { response } = error;
 
   if (response && response.status) {
-
     const errorText = codeMessage[response.status] || response.statusText;
-    const {
-      status, url } = response;
+    const { status, url } = response;
 
-    console.log(`请求错误 ${status}: ${url}`)
+    console.log(`请求错误 ${status}: ${url}`);
     // notification.error({
 
     //   message: `请求错误 ${status}: ${url}`,
@@ -54,14 +50,11 @@ const request = extend({
 
 // request拦截器, 改变url 或 options.
 request.interceptors.request.use((url, options) => {
-
-  return { url, options }
-
-})
+  return { url, options };
+});
 
 // response拦截器, 处理response
 request.interceptors.response.use((response) => {
-
   return response;
 });
 

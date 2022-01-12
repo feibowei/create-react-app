@@ -1,24 +1,29 @@
 module.exports = {
-  plugins: ['simple-import-sort'],
-  extends: ['@white-matrix/eslint-config'],
-  parserOptions: {
-    project: require.resolve('./tsconfig.json')
+  env: {
+    browser: true,
+    commonjs: true,
+    es6: true,
+    jest: true,
+    node: true
   },
+  extends: [],
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module'
+  },
+  plugins: ['simple-import-sort'],
+  root: true,
   rules: {
     'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
-    'no-void': 'off',
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-unsafe-assignment': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    'react/react-in-jsx-scope': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/ban-types': 0,
-    '@typescript-eslint/no-use-before-define': ['error'],
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-type-alias': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/consistent-type-definitions': ['off', 'type'],
-    '@typescript-eslint/no-empty-interface': 'warn'
+    'simple-import-sort/exports': 'error'
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   }
 };
