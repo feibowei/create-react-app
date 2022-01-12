@@ -1,3 +1,6 @@
 node_modules
 dist
 build
+
+global.d.ts
+tsconfig.json

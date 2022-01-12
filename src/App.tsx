@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styles from './App.less';
 import { Content } from './components/Content';
 import { Header } from './components/Header';
